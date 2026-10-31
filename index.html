@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#7560d6"><meta name="description" content="우리 가게의 오늘을 이해하는 소상공인 경영 자가진단. 재무, 매출, 사업 안정성, 운영 역량을 한눈에 확인하세요.">
+<title>소담 · 소상공인 경영평가</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="model.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.7"/><rect x="14" y="3" width="7" height="7" rx="1.7"/><rect x="3" y="14" width="7" height="7" rx="1.7"/><rect x="14" y="14" width="7" height="7" rx="1.7"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 15v-4m5 4V7m5 8V4"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24"><path d="M4 10v10h16V10M3 10l2-6h14l2 6M3 10c0 3 4 3 4 0 0 3 5 3 5 0 0 3 5 3 5 0 0 3 4 3 4 0M9 20v-6h6v6"/></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><path d="M3 11a9 9 0 1 1 2 7M3 4v7h7m2-4v6l4 2"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v15M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m4 17 6-6 4 3 6-9m-6 0h6v6"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 8V5H5a2 2 0 0 1 0-4h13v4M3 3v16a2 2 0 0 0 2 2h15V8zM15 11h6v6h-6z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6zM8 12l3 3 5-6"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 5m0 2v1"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</defs></svg>
+<aside class="sidebar">
+<a class="brand" href="#dashboard" aria-label="소담 홈"><span class="brand-mark">소</span><span>소담<span class="brand-dot">.</span><small>소상공인을 담다</small></span></a>
+<div class="workspace-label">MY BUSINESS</div>
+<nav aria-label="주요 메뉴">
+<a href="#dashboard" data-nav="dashboard"><svg><use href="#i-grid"/></svg>진단 대시보드</a>
+<a href="#assessment" data-nav="assessment"><svg><use href="#i-chart"/></svg>새로운 평가<span class="nav-plus">+</span></a>
+<a href="#history" data-nav="history"><svg><use href="#i-history"/></svg>평가 이력</a>
+<div class="nav-separator"></div>
+<a href="#method" data-nav="method"><svg><use href="#i-book"/></svg>평가모형 안내</a>
+</nav>
+<div class="sidebar-bottom"><div class="side-help"><span class="help-graphic">✦</span><strong>작은 가게의 큰 가능성</strong><p>더 건강한 경영의 시작,<br>소담이 함께합니다.</p><a href="#method">평가 기준 알아보기 <span>↗</span></a></div><div class="side-profile"><div class="avatar">사</div><div><strong>우리 가게 워크스페이스</strong><small>개인 경영 진단</small></div><span class="status-dot"></span></div></div>
+</aside>
+<div class="app-shell">
+<header class="topbar"><div class="breadcrumbs"><span>워크스페이스</span><span>/</span><strong id="breadcrumb">진단 대시보드</strong></div><div class="top-actions"><span class="private-label"><svg><use href="#i-shield"/></svg>나만의 경영 진단</span><button class="icon-button" id="help-button" aria-label="이용 안내"><svg><use href="#i-help"/></svg></button><span class="top-avatar">사</span></div></header>
+<main id="main" tabindex="-1"></main>
+<footer><span><strong>소담.</strong> 더 나은 경영을 위한 작은 시작</span><span>경영 자가진단 v1.1 · 참고용 평가모형</span></footer>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<dialog id="help-dialog"><button class="dialog-close" aria-label="닫기">×</button><div class="dialog-icon"><svg><use href="#i-store"/></svg></div><h2>소담, 이렇게 이용하세요.</h2><p>사업 정보를 입력하면 4개 영역을 평가하고<br>우리 가게의 개선 우선순위를 알려드립니다.</p><ol><li>‘새로운 평가’에서 사업·재무 정보를 입력하세요.</li><li>진단 결과와 항목별 점수 근거를 확인하세요.</li><li>‘평가 저장’으로 이 브라우저에 이력을 남기세요.</li></ol><div class="note">평가 데이터는 서버로 전송하지 않습니다. 저장한 이력은 현재 브라우저에만 보관되며, 브라우저 데이터 삭제 시 함께 삭제됩니다.</div><button class="button primary dialog-done">시작하기</button></dialog>
+</body></html>
